@@ -1,4 +1,5 @@
 import React from 'react';
+import Component from 'react';
 
 {/* my timer starts at 0 and counts up */ }
 {/* timer needs a reset state and a stop state */ }
@@ -9,6 +10,7 @@ import React from 'react';
 {/*according to examples on w3schools, my starting state should be under class start */}
 {/* https://www.w3schools.com/react/react_state.asp */}
 {/* learned that all script must run before render as well! */}
+{/* when using extending metods instead of functions, according to w3schools, it has to be defined in import */}
 
 class Stopwatch extends Component {
     offState={   /*starting at off state, everything should be 0 */
