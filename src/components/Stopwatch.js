@@ -16,14 +16,17 @@ class Stopwatch extends Component {
         start:0,
         time:0,
     }
+    /* SYNTAX REMINDERS!!! */
     /* note for the future, these are objects don't use =, use : for objects inside a function!!! */
     /* now I need a function to execute the values above, but also run after 0 */
+    /* also remember objects go inside {}... smh */
+
     startCounting = () => {
-        this.setState (    /* this current time frame should equal to: start running. setState to change it from previous state where it was off */
+        this.setState ({    /* this current time frame should equal to: start running. setState to change it from previous state where it was off */
             on: true,
             onCount:this.state.onCount, /* just declaring in case of undefined errors */
             start: Date.prototype.getSeconds() - this.state.onCount, /* start time from right now till ??? */
-        )
+        })
     }
 
 
