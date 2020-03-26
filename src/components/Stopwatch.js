@@ -6,9 +6,9 @@ import React from 'react';
 {/*  log seconds first using Date.prototype.getSeconds() in a state counting from 0 */}
 {/* realized rendering visual components should be separate */}
 
-function Stopwatch() {
+Stopwatch=() =>{
      return(
-     <div className="watchBox">
+     <div className="Stopwatch">
          
      
      </div>
@@ -16,6 +16,8 @@ function Stopwatch() {
      )
 
     }
+
+    /* off state to start off, then an on switch? probably need a running one separate from the on */
         offState={        
         on=false, /*on switch should be off at start */
         start=0,  /* start counting at 0 */
@@ -24,8 +26,11 @@ function Stopwatch() {
 
         timeStart={
             on=true, /* when pressed time starts, switch on */
-            
+
+
         }
+
+        // don't forget to make an off one!
     
 
 export default Stopwatch;
