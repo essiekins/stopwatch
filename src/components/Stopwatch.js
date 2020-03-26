@@ -1,5 +1,5 @@
 import React from 'react';
-import Component from 'react';
+import Component from 'react'; /* how do I even declare this? */
 
 {/* my timer starts at 0 and counts up */ }
 {/* timer needs a reset state and a stop state */ }
@@ -13,7 +13,7 @@ import Component from 'react';
 {/* when using extending metods instead of functions, according to w3schools, it has to be defined in import */}
 
 class Stopwatch extends Component {
-    offState={   /*starting at off state, everything should be 0 */
+    state={   /*starting at off state, everything should be 0 */
         on:false,
         start:0,
         time:0,
