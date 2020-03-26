@@ -1,6 +1,4 @@
-import React from 'react';
-import Component from 'react'; /* how do I even declare this? */
-
+import React, { Component } from 'react' ; 
 {/* my timer starts at 0 and counts up */ }
 {/* timer needs a reset state and a stop state */ }
 {/* render function first? */}
@@ -11,28 +9,41 @@ import Component from 'react'; /* how do I even declare this? */
 {/* https://www.w3schools.com/react/react_state.asp */}
 {/* learned that all script must run before render as well! */}
 {/* when using extending metods instead of functions, according to w3schools, it has to be defined in import */}
+{/* Need to use intervals for fractions of seconds with setInterval */}
 
 class Stopwatch extends Component {
-    state={   /*starting at off state, everything should be 0 */
+    
+    offState={   /*starting at off state, everything should be 0 */
         on:false,
-        start:0,
+        onCount:0,
         time:0,
     }
+    render () {
+        return (
+    }
+    )
     /* SYNTAX REMINDERS!!! */
     /* note for the future, these are objects don't use =, use : for objects inside a function!!! */
     /* now I need a function to execute the values above, but also run after 0 */
     /* also remember objects go inside {}... smh */
-
+    
     startCounting = () => {
         this.setState ({    /* this current time frame should equal to: start running. setState to change it from previous state where it was off */
             on: true,
             onCount:this.state.onCount, /* just declaring in case of undefined errors */
             start: Date.prototype.getSeconds() - this.state.onCount, /* start time from right now till ??? */
         })
+        this.watch=setInterval(() =>{    /* intervals for my milliseconds, to keep seconds running at a realistic pace */
+          this.setState ({
+              onCount: Date.prototype.getSeconds() - this.state.start,
+          })
+        }
+        )
     }
 
 
     /* okay pause Idk how to get this in console so let's render this baby on the DOM! css time! */
+    /* before css actually render, then css */
 
     render(){
         return (
