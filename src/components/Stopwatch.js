@@ -41,20 +41,20 @@ class Stopwatch extends Component {
     /* okay pause, Idk how to get this in console so let's render this baby on the DOM! css time! */
     /* before css actually... render, then css */
     /* understanding time conversion https://stackoverflow.com/questions/21294302/converting-milliseconds-to-minutes-and-seconds-with-javascript */
-    /* 60 secs in 1 min, so... I should times it by 60% */ 
+    /* 60 secs in 1 min, so... I should multiply it by 60% */ 
+   
+    render() {
+         const {onCount} = this.state; /*render my count up, starting at original state*/
+         let seconds = ("0" + (Math.floor(onCount /1000) %60).slice -2), 
+    }
 
-    render(
-        const {onCount} = this.state; {/*render my count up, starting at original state*/}
-        let seconds = ("0" + (Math.floor(onCount /1000) %60))); /*something isn't right :c */
-        let minutes = ("0" + (Math.floor(onCount /60000) %60));
-        )
-    {
+     
         return (
             <div className="Stopwatch">
-                
+            
             </div>
         )
-    }
+   }
 };
 
 export default Stopwatch;
