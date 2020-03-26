@@ -10,18 +10,14 @@ import React, { Component } from 'react' ;
 {/* learned that all script must run before render as well! */}
 {/* when using extending metods instead of functions, according to w3schools, it has to be defined in import */}
 {/* Need to use intervals for fractions of seconds with setInterval */}
+{/* dope methods for JS dates! https://www.digitalocean.com/community/tutorials/understanding-date-and-time-in-javascript */}
 
 class Stopwatch extends Component {
-    
     offState={   /*starting at off state, everything should be 0 */
         on:false,
         onCount:0,
         time:0,
     }
-    render () {
-        return (
-    }
-    )
     /* SYNTAX REMINDERS!!! */
     /* note for the future, these are objects don't use =, use : for objects inside a function!!! */
     /* now I need a function to execute the values above, but also run after 0 */
@@ -37,21 +33,24 @@ class Stopwatch extends Component {
           this.setState ({
               onCount: Date.prototype.getSeconds() - this.state.start,
           })
-        }
-        )
-    }
+        }, 15 ); /* starting with 15 ms */
+    };
 
 
-    /* okay pause Idk how to get this in console so let's render this baby on the DOM! css time! */
-    /* before css actually render, then css */
+    /* okay pause, Idk how to get this in console so let's render this baby on the DOM! css time! */
+    /* before css actually... render, then css */
+    /* understanding time conversion https://stackoverflow.com/questions/21294302/converting-milliseconds-to-minutes-and-seconds-with-javascript */
+    /* 60 secs in 1 min, so... I should times it by 60% */ 
 
     render(){
         return (
             <div className="Stopwatch">
-           
+                const {onCount} = this.state; {/*render my count up */}
+                let seconds = ("0" + (Math.floor(onCount /1000) * %60)); {/*something isn't right :c */}
+                let minutes =
             </div>
         )
     }
-}
+};
 
 export default Stopwatch;
