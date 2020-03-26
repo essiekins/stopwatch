@@ -3,6 +3,7 @@ import React, { Component } from 'react' ;
 {/* timer needs a reset state and a stop state */ }
 {/* render function first? */}
 {/* https://reactjs.org/docs/react-component.html */}
+{/*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date */}
 {/*  log seconds first using Date.prototype.getSeconds() in a state counting from 0 */}
 {/* realized rendering visual components should be separate */}
 {/*according to examples on w3schools, my starting state should be under class start */}
@@ -43,10 +44,11 @@ class Stopwatch extends Component {
     /* 60 secs in 1 min, so... I should times it by 60% */ 
 
     render(
-        const {onCount} = this.state; {/*render my count up */}
-        let seconds = ("0" + (Math.floor(onCount /1000) * %60)); {/*something isn't right :c */}
-        let minutes = ("0")
-    ){
+        const {onCount} = this.state; {/*render my count up, starting at original state*/}
+        let seconds = ("0" + (Math.floor(onCount /1000) %60))); /*something isn't right :c */
+        let minutes = ("0" + (Math.floor(onCount /60000) %60));
+        )
+    {
         return (
             <div className="Stopwatch">
                 
