@@ -42,12 +42,14 @@ class Stopwatch extends Component {
     /* understanding time conversion https://stackoverflow.com/questions/21294302/converting-milliseconds-to-minutes-and-seconds-with-javascript */
     /* 60 secs in 1 min, so... I should times it by 60% */ 
 
-    render(){
+    render(
+        const {onCount} = this.state; {/*render my count up */}
+        let seconds = ("0" + (Math.floor(onCount /1000) * %60)); {/*something isn't right :c */}
+        let minutes = ("0")
+    ){
         return (
             <div className="Stopwatch">
-                const {onCount} = this.state; {/*render my count up */}
-                let seconds = ("0" + (Math.floor(onCount /1000) * %60)); {/*something isn't right :c */}
-                let minutes =
+                
             </div>
         )
     }
