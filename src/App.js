@@ -1,11 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Stopwatch from './components/Stopwatch';
+
 
 function App() {
   return (
     <div className="App">
-      <h1>Stopwatch</h1>
+      <div className="watchBox">Stopwatch</div>
   
     </div>
   );
